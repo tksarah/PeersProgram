@@ -4,7 +4,6 @@ theme:
 
 nav:
   - Home: index.md
-  - Guide: guide.md
   - Tutorial:
       - Getting Start: tutorial/intro.md
       - Node Spec: tutorial/spec.md
