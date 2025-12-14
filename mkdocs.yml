@@ -4,9 +4,15 @@ theme:
 
 nav:
   - Home: index.md
-  - Tutorial:
-      - Getting Start: tutorial/intro.md
-      - Node Spec: tutorial/spec.md
-      - Details: tutorial/details.md
-  - Peers: peers.md
-  - References: references.md
+  - About:
+      - Mission: about/mission.md
+      - Operations: about/operations.md
+  - Node Operation:
+      - Setup Guide: node/setup.md
+      - FAQ: node/faq.md
+  - Community:
+      - Join Discord: community/discord.md
+      - Member List: community/members.md
+  - Resources:
+      - References: resources/references.md
+  - News & Updates: news/index.md
