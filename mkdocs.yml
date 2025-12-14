@@ -1,6 +1,6 @@
 site_name: Peers Program Portal
 theme:
-  name: 'material'
+  name: 'slate'
 
 nav:
   - Home: index.md
