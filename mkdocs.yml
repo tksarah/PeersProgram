@@ -1,0 +1,13 @@
+site_name: Peers Program Portal
+theme:
+  name: 'material'
+
+nav:
+  - Home: index.md
+  - Guide: guide.md
+  - Tutorial:
+      - Getting Start: tutorial/intro.md
+      - Node Spec: tutorial/spec.md
+      - Details: tutorial/details.md
+  - Peers: peers.md
+  - References: references.md
