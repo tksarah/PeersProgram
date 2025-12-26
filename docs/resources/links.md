@@ -1,5 +1,4 @@
 # Links
-* 🔗 [Astar Peers Program - Troubleshooting Guide and FAQ](https://medium.com/@sequaja.marco/astar-peers-program-troubleshooting-guide-and-faq-a6958a76d021) / Author: Sequaja
 * 🔗 [Introducing the Peers Program](https://medium.com/the-astar-bulletin-tab/introducing-the-peers-program-f3886480b441) / Author: tksarah
 * 🔗 [Setup Astar Node with Raspberry Pi 5 — Part 1](https://medium.com/the-astar-bulletin-tab/setup-astar-node-with-raspberry-pi-5-part-1-e8647498e199) / Author: tksarah
 * 🔗 [Setup Astar Node with Raspberry Pi 5 — Part 2](https://medium.com/the-astar-bulletin-tab/setup-astar-node-with-raspberry-pi-5-part-2-ba982ab93c9c) / Author: tksarah
