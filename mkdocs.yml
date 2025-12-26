@@ -4,10 +4,8 @@ theme:
 
 nav:
   - Home: index.md
-  - About:
-      - Mission: about/mission.md
-      - Operations: about/operations.md
-  - Node Operation:
+  - Updates: updates/index.md
+  - Build:
       - Setup Guide: node/setup.md
       - FAQ: node/faq.md
   - Community:
@@ -15,4 +13,3 @@ nav:
       - Member List: community/members.md
   - Resources:
       - Links: resources/links.md
-  - News & Updates: news/index.md
