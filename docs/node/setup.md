@@ -3,7 +3,9 @@ You can refer to the official documentation below for instructions on how to set
 
 A node can be set up on a physical machine, virtual machine, container environment, or cloud instance. However, any setup other than a physical machine requires a significant amount of infrastructure-related technical knowledge.
 
-For those who are not technical specialists, we recommend starting by preparing a physical machine.
+![Machines](assets/images/machines.png)
+
+For those who are not technical specialists, we recommend starting by preparing a **physical machine**.
 
 ## Official document
 
