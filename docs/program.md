@@ -8,7 +8,6 @@ As nodes spread across the world and more diverse participants join, Astar becom
 The Peers Program is a concrete initiative to advance this decentralization.
 By bringing together the power of our community, we aim to grow Astar into a truly global and sustainable network.
 
-
 # Purpose
 
 This program is designed with two primary objectives:
@@ -31,6 +30,14 @@ The regions we are focusing on are listed below. However, the initiative remains
 * Australia (Partially achieved in the season 1-2)
 
 ![Map](./assets/images/map_202601.png)
+
+# Issues and Improvements
+The issues identified in Seasons 1 and 2, along with their improvement points, are as follows:
+
+**ISSUE:** Prerequisite skills for node operation <br> **IMPROVEMENT:**  Although building an archive node is relatively simple, operating a node generally requires knowledge related to Linux system administration. Therefore, the ability to perform basic Linux operations has been added as a requirement.
+
+**ISSUE:** Node hang-ups and unexpected shutdowns <br> **IMPROVEMENT:**  Especially on ARM architectures, machines with only 4GB of physical memory have difficulty maintaining long-term continuous operation. For this reason, machines equipped with 8GB or more memory are recommended.
+
 
 # Participation Requirements
 

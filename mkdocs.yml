@@ -1,10 +1,14 @@
 site_name: Peers Program Portal
 theme:
+  #name: material
+  #name: readthedocs
+  #name: 'darkly'
   name: 'slate'
 
 nav:
-  - README: ./program.md
-  - Updates: updates/index.md
+  - README:
+      - About Program: ./program.md
+      - Updates: ./updates.md
   - Build:
       - Setup Guide: node/setup.md
       - FAQ: node/faq.md
