@@ -41,9 +41,9 @@ The regions we are focusing on are listed below. However, the initiative remains
 * up to 5 candidates in any region
 * The node must be an archive node
 * The node must run without big interruption (no need for 100% uptime but at least 80% is asked)
-* The node must be connected to Telemetry
+* The node must be connected to [Telemetry](https://telemetry.polkadot.io/)
 * The node has to be run on a Raspberry Pi 4/5 or other small ARM‑based machines, and x86_64 machines are also supported
-* The device should have at least 4GB of RAM, with 8GB or more recommended
+* The machines should have at least 4GB of RAM, with 8GB or more recommended
 
 
 # Program Milestones

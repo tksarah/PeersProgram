@@ -1,11 +1,16 @@
-# README
-まずはここから、プログラムの詳細
-# Update
-更新内容
-# Build
-アーカイブノード構築方法
-# Community
-コミュニティ情報
-# Resources
-参考情報やリンク集
+Here is the description for each page of this portal:
 
+# README
+Start here — overview and details of the program
+
+# Update
+List of updates and changes
+
+# Build
+How to set up an archive node and FAQ
+
+# Community
+Application, Support, communication, and participating members of this program
+
+# Resources
+Reference materials and useful links

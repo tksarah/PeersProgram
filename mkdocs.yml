@@ -9,6 +9,7 @@ nav:
       - Setup Guide: node/setup.md
       - FAQ: node/faq.md
   - Community:
+      - Application: community/application.md
       - Join Discord: community/discord.md
       - Member List: community/members.md
   - Resources:
