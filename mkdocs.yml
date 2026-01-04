@@ -3,6 +3,7 @@ theme:
   name: 'slate'
 
 nav:
+  - README: ./program.md
   - Updates: updates/index.md
   - Build:
       - Setup Guide: node/setup.md
