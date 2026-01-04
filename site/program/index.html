@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>README - Peers Program Portal</title>
+        <title>About Program - Peers Program Portal</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -34,11 +34,18 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">README</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../updates/" class="nav-link">Updates</a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">README</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">About Program</a>
+</li>
+                                    
+<li>
+    <a href="../updates/" class="dropdown-item">Updates</a>
+</li>
+                                </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Build</a>
@@ -130,6 +137,11 @@
               </ul>
             </li>
             
+            <li class="nav-item" data-bs-level="1"><a href="#issues-and-improvements" class="nav-link">Issues and Improvements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-bs-level="1"><a href="#participation-requirements" class="nav-link">Participation Requirements</a>
               <ul class="nav flex-column">
               </ul>
@@ -178,6 +190,10 @@ Another objective of this initiative is to foster the growth of technical talent
 <li>Australia (Partially achieved in the season 1-2)</li>
 </ul>
 <p><img alt="Map" src="../assets/images/map_202601.png" /></p>
+<h1 id="issues-and-improvements">Issues and Improvements</h1>
+<p>The issues identified in Seasons 1 and 2, along with their improvement points, are as follows:</p>
+<p><strong>ISSUE:</strong> Prerequisite skills for node operation <br> <strong>IMPROVEMENT:</strong>  Although building an archive node is relatively simple, operating a node generally requires knowledge related to Linux system administration. Therefore, the ability to perform basic Linux operations has been added as a requirement.</p>
+<p><strong>ISSUE:</strong> Node hang-ups and unexpected shutdowns <br> <strong>IMPROVEMENT:</strong>  Especially on ARM architectures, machines with only 4GB of physical memory have difficulty maintaining long-term continuous operation. For this reason, machines equipped with 8GB or more memory are recommended.</p>
 <h1 id="participation-requirements">Participation Requirements</h1>
 <ul>
 <li>The program is open to anyone</li>
