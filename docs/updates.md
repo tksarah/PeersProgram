@@ -6,5 +6,5 @@ Future updates...
 
 </p>
 
-![2023-2025](../assets/images/2023-2025.png)
+![2023-2025](./assets/images/2023-2025.png)
 
