@@ -100,14 +100,18 @@ The rewards will be distributed from the [wallet balance](https://astar.subscan.
 # Disclaimer
 This proposal is adaptable and can be refined based on community consensus and feedback.
 
+
 ---
-Let’s work together to further decentralize Astar!
 
-Sincerely,
+## **Thank You for Reading**
 
-bLd, Astar Network DevOps Engineer
-<p>
-tksarah, Astar Network Ecosystem Agent (Technical)
+We appreciate your continued support and participation.  
+Let’s keep building a more decentralized and resilient Astar together.
+
+**With appreciation,**  
+bLd — Astar Network DevOps Engineer  
+tksarah — Astar Network Ecosystem Agent (Technical)
+
 
 # Resources
 ## Previous proposals
