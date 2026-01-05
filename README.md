@@ -40,8 +40,6 @@ The regions we are focusing on are listed below. However, the initiative remains
 * South East Asia (Partially achieved in the season 1-2)
 * Australia (Partially achieved in the season 1-2)
 
-![Map](./assets/images/map_202601.png)
-
 # Issues and Improvements
 The issues identified in Seasons 1 and 2, along with their improvement points, are as follows:
 
@@ -102,6 +100,19 @@ The rewards will be distributed from the [wallet balance](https://astar.subscan.
 # Disclaimer
 This proposal is adaptable and can be refined based on community consensus and feedback.
 
+# Resources
+## Previous proposals
+
+Jun 2024
+[Funding for the Peers Program](https://forum.astar.network/t/funding-for-the-peers-program/7053)
+
+Sep 2023
+[Revised Proposal: Proposal: Peers program - spread Astar nodes across the world with Raspberry Pi](https://forum.astar.network/t/revised-proposal-proposal-peers-program-spread-astar-nodes-across-the-world-with-raspberry-pi/5124)
+
+Jan 2023
+[[DEPRECIATED] Proposal: Peers program - spread Astar nodes across the world with Raspberry Pi](https://forum.astar.network/t/depreciated-proposal-peers-program-spread-astar-nodes-across-the-world-with-raspberry-pi/4250)
+
+
 Let’s work together to further decentralize Astar!
 
 Sincerely,
@@ -109,3 +120,4 @@ Sincerely,
 **bLd**, Astar Network DevOps Engineer
 <br>
 **tksarah**, Astar Network Ecosystem Agent (Technical)
+---
