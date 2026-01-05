@@ -106,7 +106,7 @@ Let’s work together to further decentralize Astar!
 Sincerely,
 
 bLd, Astar Network DevOps Engineer
-
+<p>
 tksarah, Astar Network Ecosystem Agent (Technical)
 
 # Resources
