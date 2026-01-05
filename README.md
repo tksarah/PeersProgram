@@ -100,6 +100,15 @@ The rewards will be distributed from the [wallet balance](https://astar.subscan.
 # Disclaimer
 This proposal is adaptable and can be refined based on community consensus and feedback.
 
+---
+Let’s work together to further decentralize Astar!
+
+Sincerely,
+
+bLd, Astar Network DevOps Engineer
+
+tksarah, Astar Network Ecosystem Agent (Technical)
+
 # Resources
 ## Previous proposals
 
@@ -111,13 +120,3 @@ Sep 2023
 
 Jan 2023
 [[DEPRECIATED] Proposal: Peers program - spread Astar nodes across the world with Raspberry Pi](https://forum.astar.network/t/depreciated-proposal-peers-program-spread-astar-nodes-across-the-world-with-raspberry-pi/4250)
-
-
-Let’s work together to further decentralize Astar!
-
-Sincerely,
-
-bLd, Astar Network DevOps Engineer
-<br>
-tksarah, Astar Network Ecosystem Agent (Technical)
----
