@@ -103,14 +103,15 @@ This proposal is adaptable and can be refined based on community consensus and f
 
 ---
 
+---
+
 ## **Thank You for Reading**
 
-We appreciate your continued support and participation.  
-Let’s keep building a more decentralized and resilient Astar together.
+Astar’s decentralization is a collective effort.  
+We look forward to building the next chapter with all of you.
 
-Astar’s decentralization is a collective effort. We look forward to building the next chapter with all of you.
-**Sincerely,**
-bLd — Astar Network DevOps Engineer
+**Sincerely,**  
+bLd — Astar Network DevOps Engineer  
 tksarah — Astar Network Ecosystem Agent (Technical)
 
 # Resources
