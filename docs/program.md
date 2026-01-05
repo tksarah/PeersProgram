@@ -17,7 +17,8 @@ The goal of this program is to promote decentralization within the Astar Network
 We aim to encourage participation from diverse regions and build a structure that enhances the network’s robustness and sustainability.
 
 2. **Developing future technical talent**  
-Another objective of this initiative is to foster the growth of technical talent by enabling participants to experience firsthand how individual contributions—though small on their own—can collectively form a significant part of the Astar Network ecosystem.
+Another objective of this initiative is to foster the growth of technical talent by enabling participants to experience firsthand how individual contributions—though small on their own—can collectively form a significant part of the Astar Network ecosystem.  
+Therefore, while blockchain nodes are generally expected to run on machines with relatively high specifications and high availability, this program recommends operating archive nodes on comparatively lower‑spec machines.
 
 # Target Regions
 
@@ -42,15 +43,15 @@ The issues identified in Seasons 1 and 2, along with their improvement points, a
 # Participation Requirements
 
 * The program is open to anyone
-* If the number of applicants exceeds the available slots, participants will be selected by this program manager(tksarah) at this stage.
-* Since we have confirmed that the requirements are fairly challenging for non‑technical participants, we ask that candidates have at least some basic experience with Linux.
 * 5 candidates minimum from priority regions 
 * up to 5 candidates in any region
+* The participants will be selected by this program manager(tksarah) at this stage.
 * The node must be an archive node
 * The node must run without big interruption (no need for 100% uptime but at least 80% is asked)
 * The node must be connected to [Telemetry](https://telemetry.polkadot.io/)
 * The node has to be run on a Raspberry Pi 4/5 or other small ARM‑based machines, and x86_64 machines are also supported
 * The machines should have at least 4GB of RAM, with 8GB or more recommended
+* Since we have confirmed that the requirements are fairly challenging for non‑technical participants, we ask that candidates have at least some basic experience with Linux.
 
 
 # Program Milestones
@@ -73,9 +74,7 @@ This reward is provided to help offset a portion of the monthly costs associated
 * 50% reward if availability is below 80%
 * No reward if the node is not running or is inactive
 
-**Nodes** that remain inactive for an extended period or frequently go offline and fail to stay synchronized will receive zero rewards.
-
-Because this is a participation program for community members and also serves as a training initiative, the required uptime is set more leniently than what is typically expected for blockchain nodes.
+Nodes that remain inactive for an extended period or frequently go offline and fail to stay synchronized will receive zero rewards.
 
 ### Reward Basis 
 * Base reward amount is **USD 30**, paid in ASTR tokens

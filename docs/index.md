@@ -1,14 +1,18 @@
 Here is the description for each page of this portal:
 
 ## README
-- About Program: Start here — overview and details of the program
-- Updates: List of updates and changes
+- **[About Program](./program.md)**: Start here — overview and details of the program
+- **[Updates](./updates.md)**: List of updates and changes
 
 ## Build
-How to set up an archive node and FAQ
+- **[Setup Guide](./node/setup.md)**: How to setup an archive node
+- **[FAQ](./node/faq.md)**: Troubleshooting Guide and FAQ
 
 ## Community
-Application, support, communication, and participating members of this program
+- **[Application](./community/application.md)**: Application
+- **[Join Discord](./community/discord.md)**: Communication space
+- **[Members](./community/members.md)**: Current peers program member list
 
 ## Resources
-Reference materials and useful links
+- **[Links](./resources/links.md)**: Useful link list
+
