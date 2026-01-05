@@ -8,7 +8,7 @@ Here is the description for each page of this portal:
 How to set up an archive node and FAQ
 
 ## Community
-Application, Support, communication, and participating members of this program
+Application, support, communication, and participating members of this program
 
 ## Resources
 Reference materials and useful links
