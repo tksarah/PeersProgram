@@ -1,4 +1,4 @@
-site_name: Peers Program Portal
+site_name: Astar Peers Program
 theme:
   #name: material
   #name: readthedocs
@@ -15,6 +15,6 @@ nav:
   - Community:
       - Application: community/application.md
       - Join Discord: community/discord.md
-      - Member List: community/members.md
+      - Peers: community/peers.md
   - Resources:
       - Links: resources/links.md

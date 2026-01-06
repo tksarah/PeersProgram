@@ -1,4 +1,4 @@
-# Peers Members
+# Peers
 
 | Discord Name | Node Name   | Join Date   | Region     | On-chain Identity |
 |--------------|-------------|-------------|------------|-------------------|

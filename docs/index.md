@@ -1,6 +1,8 @@
 
 ## Build the Future of Astar: Join the Peers Program
 
+This website is the portal site for Astar Peers Program.
+
 ![top](./assets/images/topimage.png)
 
 ## README
@@ -14,7 +16,7 @@
 ## Community
 - **[Application](./community/application.md)**: Application
 - **[Join Discord](./community/discord.md)**: Communication space
-- **[Members](./community/members.md)**: Current peers program member list
+- **[Peers](./community/peers.md)**: Current peers list
 
 ## Resources
 - **[Links](./resources/links.md)**: Useful link list
