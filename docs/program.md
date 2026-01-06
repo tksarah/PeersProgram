@@ -2,7 +2,7 @@
 # Strengthening Astar Through Decentralization
 
 </p>
-![top](./assets/images/topimage.png)
+![topimage](./assets/images/topimage.png)
 </p>
 
 One of the core values at the heart of Astar Network is decentralization.
