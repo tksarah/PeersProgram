@@ -3,7 +3,7 @@
 
 This website is the portal site for Astar Peers Program.
 
-![top](./assets/images/topimage.png)
+![top](./assets/images/top.jpg)
 
 ## README
 - **[About Program](./program.md)**: Start here — overview and details of the program

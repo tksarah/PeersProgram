@@ -1,6 +1,10 @@
 
 # Strengthening Astar Through Decentralization
 
+</p>
+![top](./assets/images/topimage.png)
+</p>
+
 One of the core values at the heart of Astar Network is decentralization.
 Decentralization is not just an ideal—it is the foundation that supports the network’s resilience, efficiency, and long-term sustainability.
 As nodes spread across the world and more diverse participants join, Astar becomes stronger, fairer, and more trustworthy.
