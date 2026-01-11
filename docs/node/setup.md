@@ -9,6 +9,17 @@ For those who are not technical specialists, we recommend starting by preparing 
 
 ![Machines](../assets/images/machines.png)
 
+## Docker
+
+The configuration using Docker is documented in the official guide.  
+
+* 🔗 [Dokcker](https://docs.astar.network/docs/build/nodes/archive-node/docker)
+
+## Docker Compose
+
+For reference, here is an example procedure for setting up an archive node using Docker Compose. 
+
+* 🔗 [How to create an Archive Node with Docker compose.yml](https://github.com/jttech-au/Astar-Archive-Node) / Author: Dagga
 
 # Astar Releases 
 
