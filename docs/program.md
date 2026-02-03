@@ -76,6 +76,7 @@ This reward is provided to help offset a portion of the monthly costs associated
 * 100% reward for availability exceeding 80%
 * If no on-chain identity is registered: 50% deduction applied
 * 50% reward if availability is below 80%
+* Rewards are 30% during recovery (resync).
 * No reward if the node is not running or is inactive
 
 Nodes that remain inactive for an extended period or frequently go offline and fail to stay synchronized will receive zero rewards.
