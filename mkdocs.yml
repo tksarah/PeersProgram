@@ -11,6 +11,7 @@ nav:
       - Updates: ./updates.md
   - Build:
       - Setup Guide: node/setup.md
+      - Maintenance Tips: node/tips.md
       - FAQ: node/faq.md
   - Community:
       - Application: community/application.md

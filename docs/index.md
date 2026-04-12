@@ -11,6 +11,7 @@ This website is the portal site for Astar Peers Program.
 
 ## Build
 - **[Setup Guide](./node/setup.md)**: How to setup an archive node
+- **[Maintenance Tips](./node/tips.md)**: Maintenance tips for an archive node
 - **[FAQ](./node/faq.md)**: Troubleshooting Guide and FAQ
 
 ## Community
