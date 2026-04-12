@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Join Discord - Astar Peers Program</title>
+        <title>Maintenance Tips - Astar Peers Program</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -48,36 +48,36 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Build</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Build</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../node/setup/" class="dropdown-item">Setup Guide</a>
+    <a href="../setup/" class="dropdown-item">Setup Guide</a>
 </li>
                                     
 <li>
-    <a href="../../node/tips/" class="dropdown-item">Maintenance Tips</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Maintenance Tips</a>
 </li>
                                     
 <li>
-    <a href="../../node/faq/" class="dropdown-item">FAQ</a>
+    <a href="../faq/" class="dropdown-item">FAQ</a>
 </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Community</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Community</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../application/" class="dropdown-item">Application</a>
+    <a href="../../community/application/" class="dropdown-item">Application</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Join Discord</a>
+    <a href="../../community/discord/" class="dropdown-item">Join Discord</a>
 </li>
                                     
 <li>
-    <a href="../peers/" class="dropdown-item">Peers</a>
+    <a href="../../community/peers/" class="dropdown-item">Peers</a>
 </li>
                                 </ul>
                             </li>
@@ -99,12 +99,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../application/" class="nav-link">
+                                <a rel="prev" href="../setup/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../peers/" class="nav-link">
+                                <a rel="next" href="../faq/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -126,8 +126,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#astar-network-discord" class="nav-link">Astar Network Discord</a>
+            <li class="nav-item" data-bs-level="1"><a href="#maintenance-tips" class="nav-link">Maintenance tips</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#replace-the-hdd" class="nav-link">Replace the HDD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -135,17 +139,160 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="astar-network-discord">Astar Network Discord</h2>
-<ol>
-<li>
-<p>Join <a href="https://discord.gg/astarnetwork">Astar Network Discord</a> </p>
-</li>
-<li>
-<p>In “Channels &amp; Roles,” select the <strong>Builder Role</strong>. <p>  <img alt="Developer role" src="../../assets/images/role.png" /></p>
-</li>
-</ol>
-<p>All communication related to "Peers Program" will occur in the <strong>#peers-program</strong> channel.</p>
-<p><img alt="Peers-Channel" src="../../assets/images/channel.png" /></p></div>
+<h1 id="maintenance-tips">Maintenance tips</h1>
+<h2 id="replace-the-hdd">Replace the HDD</h2>
+<p><strong>XFS Archive Node: Migrating Data from a 2TB HDD to a 5TB HDD (USB / Ubuntu 24.04 LTS)</strong></p>
+<h3 id="introduction">Introduction</h3>
+<p>This document describes the procedure used to migrate data from a 2TB HDD to a larger 5TB HDD on an archive node.<br />
+The migration was required due to increasing disk usage on the running node.</p>
+<p>The environment uses:</p>
+<ul>
+<li><strong>Ubuntu 24.04 LTS</strong></li>
+<li><strong>XFS filesystem</strong></li>
+<li><strong>USB‑connected portable HDDs (2TB and 5TB)</strong></li>
+</ul>
+<p>This guide is intended to help other operators performing similar maintenance.</p>
+<hr />
+<h3 id="system-overview">System Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Machine</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production archive node</td>
+<td>Machine A</td>
+<td>2TB HDD mounted at <code>/var/lib/astar</code></td>
+</tr>
+<tr>
+<td>Migration workstation</td>
+<td>Machine B</td>
+<td>Used to connect both 2TB and 5TB HDDs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="data-migration-procedure">Data Migration Procedure</h3>
+<p><strong>1. Work on Machine A (Detach the device)</strong></p>
+<p>Stop the running service</p>
+<pre><code class="language-bash"># sudo systemctl stop astar.service
+</code></pre>
+<p>Unmount the data directory</p>
+<pre><code class="language-bash"># sudo umount /var/lib/astar
+</code></pre>
+<hr />
+<p><strong>2. Work on Machine B (Migration)</strong></p>
+<p>2-1. Connect disks and verify devices</p>
+<p>Connect both the 2TB and 5TB HDDs (physical work)</p>
+<p>Check device information</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,TYPE,MODEL
+</code></pre>
+<p>Example:</p>
+<pre><code>sdc  1.8T disk ST2000LM007-1R8174
+└─sdc1 1.8T part
+sdd  4.5T disk WDC WD50NDZW-11BCSS0
+└─sdd1 4.5T part
+</code></pre>
+<ul>
+<li><strong>sdc → 2TB HDD</strong></li>
+<li><strong>sdd → 5TB HDD</strong></li>
+</ul>
+<hr />
+<p>2-2. Create a partition on the 5TB HDD</p>
+<p>Create a GPT label</p>
+<pre><code class="language-bash"># sudo parted /dev/sdd mklabel gpt
+</code></pre>
+<p>⚠ Note on alignment warnings
+Running:</p>
+<pre><code class="language-bash"># sudo parted -a optimal /dev/sdd mkpart primary xfs 0% 100%
+</code></pre>
+<p>may produce:</p>
+<pre><code>The closest location we can manage is 17.4kB to 1048kB (sectors 34..2047).
+</code></pre>
+<p>This indicates the partition does <strong>not</strong> start on a 2048‑sector (1MiB) boundary.<br />
+Proper alignment is important for performance and should not be ignored.</p>
+<p>✔ Correct partition creation (aligned at 1MiB)</p>
+<pre><code class="language-bash"># sudo parted -a optimal /dev/sdd mkpart primary xfs 1MiB 100%
+</code></pre>
+<hr />
+<p>2-3. Verify the partition</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT /dev/sdd
+</code></pre>
+<p>Example:</p>
+<pre><code>sdd     4.5T
+└─sdd1  4.5T ntfs
+</code></pre>
+<hr />
+<p>2-4. Create an XFS filesystem</p>
+<pre><code class="language-bash"># sudo mkfs.xfs -f /dev/sdd1
+</code></pre>
+<p>(Output omitted)</p>
+<hr />
+<p>2-5. Confirm XFS creation</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT /dev/sdd
+</code></pre>
+<pre><code>sdd     4.5T
+└─sdd1  4.5T xfs
+</code></pre>
+<hr />
+<p>2-6. Mount both disks</p>
+<pre><code class="language-bash"># sudo mkdir /a /b
+# sudo mount /dev/sdc1 /a
+# sudo mount /dev/sdd1 /b
+</code></pre>
+<p>Verify:</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT /dev/sdc /dev/sdd
+</code></pre>
+<hr />
+<p>2-7. Perform XFS dump &amp; restore (core migration step)</p>
+<p>Dump from 2TB → Restore to 5TB</p>
+<pre><code class="language-bash"># sudo xfsdump -J - /a | sudo xfsrestore -J - /b
+</code></pre>
+<p>This process took <strong>approximately 15 hours</strong> over USB 3.0.</p>
+<p>(Output omitted)</p>
+<hr />
+<p>2-8. Verify migrated data</p>
+<pre><code class="language-bash"># sudo ls -al /b
+</code></pre>
+<hr />
+<p>2-9. Optional: XFS integrity check</p>
+<p>Unmount the restored filesystem</p>
+<pre><code class="language-bash"># sudo umount /b
+</code></pre>
+<p>Run a read‑only check</p>
+<pre><code class="language-bash"># sudo xfs_repair -n /dev/sdd1
+</code></pre>
+<p>(Output omitted)</p>
+<hr />
+<p>2-10. Unmount and remove disks</p>
+<pre><code class="language-bash"># sudo sync
+# sudo umount /a
+# sudo umount /b
+</code></pre>
+<p>Then physically disconnect both HDDs.</p>
+<hr />
+<p><strong>3. Work on Machine A (Reconnect and resume service)</strong></p>
+<p>Connect the 5TB HDD (physical work)</p>
+<p>Verify the device</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT /dev/sdb
+</code></pre>
+<p>Example:</p>
+<pre><code>sdb     4.5T
+└─sdb1  4.5T xfs
+</code></pre>
+<p>Mount the new disk</p>
+<pre><code class="language-bash"># sudo mount /dev/sdb1 /var/lib/astar
+</code></pre>
+<p>Start the service</p>
+<pre><code class="language-bash"># sudo systemctl start astar.service
+</code></pre>
+<p>Monitor logs</p>
+<pre><code class="language-bash"># journalctl -f -u astar.service -n 100
+</code></pre></div>
             </div>
         </div>
 
