@@ -15,7 +15,7 @@ For those who are not technical specialists, we recommend starting by preparing 
 
 The configuration using Docker is documented in the official guide.  
 
-* 🔗 [Dokcker](https://docs.astar.network/docs/build/nodes/archive-node/docker)
+* 🔗 [Docker](https://docs.astar.network/docs/build/nodes/archive-node/docker)
 
 ## Docker Compose
 
