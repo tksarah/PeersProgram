@@ -23,11 +23,9 @@ If multiple conditions apply in the same month, the first applicable condition i
 |---:|---|---:|
 | 1 | Required on-chain identity is not registered | No reward (0%) |
 | 2 | Restoration or resynchronization has been reported and confirmed as in progress | 30% |
-| 3 | Node is inactive or not operating outside a confirmed restoration or resynchronization period | No reward (0%) |
+| 3 | Node operation has been discontinued, or the node is determined to be inactive for the assessment period, outside a confirmed restoration or resynchronization period | No reward (0%) |
 | 4 | Monthly uptime is 80% or more | 100% |
 | 5 | Monthly uptime is below 80% | 50% |
-
-Nodes that remain inactive for a long period, go offline frequently, or fail to stay synchronized are not eligible for rewards.
 
 ## Example Amounts
 

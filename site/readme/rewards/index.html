@@ -192,33 +192,40 @@
 <p>The actual number of ASTR tokens is adjusted using the relevant ASTR price and the 30-day Exponential Moving Average (EMA30).</p>
 <p><a href="https://astar.subscan.io/tools/charts?type=price">View the ASTR price reference chart</a></p>
 <h2 id="reward-categories">Reward Categories</h2>
+<p>If multiple conditions apply in the same month, the first applicable condition in the following table takes precedence.</p>
 <table>
 <thead>
 <tr>
-<th>Node or participant status</th>
-<th style="text-align: right;">Reward rate</th>
+<th style="text-align: right;">Priority</th>
+<th>Condition</th>
+<th style="text-align: right;">Reward Rate</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Uptime 80% or more</td>
-<td style="text-align: right;">100%</td>
+<td style="text-align: right;">1</td>
+<td>Required on-chain identity is not registered</td>
+<td style="text-align: right;">No reward (0%)</td>
 </tr>
 <tr>
-<td>Uptime below 80%</td>
-<td style="text-align: right;">50%</td>
-</tr>
-<tr>
-<td>Node is being restored or resynchronized</td>
+<td style="text-align: right;">2</td>
+<td>Restoration or resynchronization has been reported and confirmed as in progress</td>
 <td style="text-align: right;">30%</td>
 </tr>
 <tr>
-<td>Node is not operating or is inactive</td>
-<td style="text-align: right;">0%</td>
+<td style="text-align: right;">3</td>
+<td>Node is inactive or not operating outside a confirmed restoration or resynchronization period</td>
+<td style="text-align: right;">No reward (0%)</td>
 </tr>
 <tr>
-<td>Required on-chain identity is not registered</td>
-<td style="text-align: right;">No reward (0%)</td>
+<td style="text-align: right;">4</td>
+<td>Monthly uptime is 80% or more</td>
+<td style="text-align: right;">100%</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Monthly uptime is below 80%</td>
+<td style="text-align: right;">50%</td>
 </tr>
 </tbody>
 </table>

@@ -48,7 +48,7 @@ Please confirm that:
 - [ ] I can aim for at least 80% uptime.
 - [ ] I have reviewed the [Node Operation Rules](./operations.md).
 - [ ] I understand the [Rewards and Payments](./rewards.md) policy.
-- Be prepared to register the required on-chain identity. See the [Node Operation Rules](../operations/#7-register-an-on-chain-identity) for details.
+- [ ] I understand that I must register the required on-chain identity. See the [Node Operation Rules](../operations/#7-register-an-on-chain-identity) for details.
 
 ## Application and Selection Process
 
