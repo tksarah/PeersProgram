@@ -7,12 +7,16 @@ theme:
 
 nav:
   - README:
-      - About Program: ./program.md
-      - Updates: ./updates.md
+      - About Program: readme/program.md
+      - Join: readme/join.md
+      - Requirements: readme/requirements.md
+      - Operations: readme/operations.md
+      - Rewards: readme/Rewards.md
+      - Updates: readme/updates.md
   - Build:
-      - Setup Guide: node/setup.md
-      - Maintenance Tips: node/tips.md
-      - FAQ: node/faq.md
+      - Setup Guide: build/setup.md
+      - Maintenance Tips: build/tips.md
+      - Technical FAQ: build/tech_faq.md
   - Community:
       - Application: community/application.md
       - Join Discord: community/discord.md
