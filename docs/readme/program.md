@@ -43,9 +43,11 @@ Participation is open worldwide. The program gives particular attention to regio
 
 | Date | Milestone |
 |---|---|
-| July 2026 | Recruit 10 Astar node operators for Season 3.1 |
-| Mar 2027 | Conduct the mid-season review, confirm the remaining reward budget, and decide on continuation proposals |
-| Sep 2027 | Conduct the final Season 3.1 review and prepare for Season 4 recruitment |
+| July 2026 | Season 3.1 recruitment opens |
+| August 31, 2026 | Application deadline |
+| March 2027 | Mid-season review |
+| September 2027 | Final review and preparation for Season 4 |
+
 
 ## Learn More
 

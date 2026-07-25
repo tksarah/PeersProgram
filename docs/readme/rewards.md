@@ -18,7 +18,7 @@ The actual number of ASTR tokens is adjusted using the relevant ASTR price and t
 
 | Node or participant status | Reward rate |
 |---|---:|
-| Uptime above 80% | 100% |
+| Uptime 80% or more | 100% |
 | Uptime below 80% | 50% |
 | Node is being restored or resynchronized | 30% |
 | Node is not operating or is inactive | 0% |
@@ -43,12 +43,6 @@ The final payment is made in ASTR, so the token amount varies with the price use
 
 **If the required on-chain identity is not registered, no reward will be provided even if the node meets the uptime requirements. Please note this.**
 
-
-## Uptime Boundary
-
-The current reward policy uses the expressions **"above 80%"** for a full reward and **"below 80%"** for a 50% reward.
-
-> **Policy clarification before publication:** The reward rate for exactly 80% uptime should be stated explicitly.
 
 ## ASTR Conversion
 

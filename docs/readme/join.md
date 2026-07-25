@@ -4,6 +4,14 @@ The Astar Peers Program welcomes community members who want to support the decen
 
 Participation is open to applicants from any region. Some places are prioritized to improve the geographic diversity of the network.
 
+## Season 3.1 Recruitment
+
+Applications for Season 3.1 are now open.
+
+> **Application Deadline:** August 31, 2026, at 23:59 UTC
+
+Applications submitted after the deadline may not be considered.
+
 ## Who Can Apply?
 
 You may apply if you:

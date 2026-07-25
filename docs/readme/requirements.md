@@ -27,8 +27,6 @@ For this reason, 8 GB or more is strongly recommended for stable operation.
 The node must run as an **archive node**, which retains the complete blockchain state and history required by the node configuration.
 Currently, **3 TB or more** of storage is required.
 
-The current program rules do not specify a fixed minimum storage capacity or storage type. Applicants should therefore:
-
 - Confirm the current storage needs of an Astar archive node before applying
 - Prepare enough free capacity for continued chain growth
 - Use storage suitable for continuous read and write activity
