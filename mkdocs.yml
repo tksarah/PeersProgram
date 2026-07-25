@@ -11,7 +11,7 @@ nav:
       - Join: readme/join.md
       - Requirements: readme/requirements.md
       - Operations: readme/operations.md
-      - Rewards: readme/Rewards.md
+      - Rewards: readme/rewards.md
       - Updates: readme/updates.md
   - Build:
       - Setup Guide: build/setup.md

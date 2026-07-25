@@ -76,4 +76,3 @@ For ongoing responsibilities, see [Node Operation Rules](./operations.md).
 - [How to Join](./join.md)
 - [Node Operation Rules](./operations.md)
 - [Rewards and Payments](./rewards.md)
-- [Frequently Asked Questions](./faq.md)

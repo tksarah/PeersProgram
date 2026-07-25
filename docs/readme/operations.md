@@ -89,4 +89,3 @@ Regular reviews are conducted to evaluate the current season’s achievements, t
 - [How to Join](./join.md)
 - [Machine and Technical Requirements](./requirements.md)
 - [Rewards and Payments](./rewards.md)
-- [Frequently Asked Questions](./faq.md)

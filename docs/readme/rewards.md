@@ -72,4 +72,3 @@ If additional funding becomes necessary for future operation of the program, a n
 - [How to Join](./join.md)
 - [Machine and Technical Requirements](./requirements.md)
 - [Node Operation Rules](./operations.md)
-- [Frequently Asked Questions](./faq.md)

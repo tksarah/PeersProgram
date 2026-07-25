@@ -55,7 +55,6 @@ Participation is open worldwide. The program gives particular attention to regio
 - [Machine and Technical Requirements](./requirements.md)
 - [Node Operation Rules](./operations.md)
 - [Rewards and Payments](./rewards.md)
-- [Frequently Asked Questions](./faq.md)
 
 ---
 

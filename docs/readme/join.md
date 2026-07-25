@@ -75,4 +75,3 @@ Please confirm that:
 - [Machine and Technical Requirements](./requirements.md)
 - [Node Operation Rules](./operations.md)
 - [Rewards and Payments](./rewards.md)
-- [Frequently Asked Questions](./faq.md)
