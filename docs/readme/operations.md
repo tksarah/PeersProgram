@@ -67,7 +67,8 @@ Nodes may also become ineligible for rewards if they:
 
 Participants should register the required on-chain identity for the account used in the program.
 
-If an on-chain identity is not registered, the reward is reduced by 50%. The program administrator should provide the identity format and verification procedure used for each season.
+If the required on-chain identity is not registered, no reward will be provided, even if the node meets the uptime requirements.
+The program administrator should provide the identity format and verification procedure used for each season.
 
 ## 8. Participate in Program Reviews
 

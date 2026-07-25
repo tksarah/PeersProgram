@@ -29,7 +29,7 @@ For detailed hardware and software conditions, see [Machine and Technical Requir
 
 For Season 3.1, the program plans to select 5 node operators:
 
-- At least five candidates from the program's priority regions
+Applications are welcome worldwide. However applicants from the priority regions will be given preference in order to improve the geographic diversity of the network.
 
 The priority regions are South America, Africa, West Asia, Southeast Asia, and Australia.
 

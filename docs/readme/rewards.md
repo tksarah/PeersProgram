@@ -22,7 +22,7 @@ The actual number of ASTR tokens is adjusted using the relevant ASTR price and t
 | Uptime below 80% | 50% |
 | Node is being restored or resynchronized | 30% |
 | Node is not operating or is inactive | 0% |
-| Required on-chain identity is not registered | 50% reduction |
+| Required on-chain identity is not registered | No reward (0%) |
 
 Nodes that remain inactive for a long period, go offline frequently, or fail to stay synchronized are not eligible for rewards.
 

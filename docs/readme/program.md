@@ -56,6 +56,3 @@ Participation is open worldwide. The program gives particular attention to regio
 - [Node Operation Rules](./operations.md)
 - [Rewards and Payments](./rewards.md)
 
----
-
-Original program page: [Astar Peers Program](https://peers.sun-t-sarah.work/program/)
