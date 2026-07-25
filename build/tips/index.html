@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Setup Guide - Astar Peers Program</title>
+        <title>Maintenance Tips - Astar Peers Program</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -39,11 +39,27 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../program/" class="dropdown-item">About Program</a>
+    <a href="../../readme/program/" class="dropdown-item">About Program</a>
 </li>
                                     
 <li>
-    <a href="../../updates/" class="dropdown-item">Updates</a>
+    <a href="../../readme/join/" class="dropdown-item">Join</a>
+</li>
+                                    
+<li>
+    <a href="../../readme/requirements/" class="dropdown-item">Requirements</a>
+</li>
+                                    
+<li>
+    <a href="../../readme/operations/" class="dropdown-item">Operations</a>
+</li>
+                                    
+<li>
+    <a href="../../readme/Rewards.md" class="dropdown-item">Rewards</a>
+</li>
+                                    
+<li>
+    <a href="../../readme/updates/" class="dropdown-item">Updates</a>
 </li>
                                 </ul>
                             </li>
@@ -52,15 +68,15 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Setup Guide</a>
+    <a href="../setup/" class="dropdown-item">Setup Guide</a>
 </li>
                                     
 <li>
-    <a href="../tips/" class="dropdown-item">Maintenance Tips</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Maintenance Tips</a>
 </li>
                                     
 <li>
-    <a href="../faq/" class="dropdown-item">FAQ</a>
+    <a href="../tech_faq/" class="dropdown-item">Technical FAQ</a>
 </li>
                                 </ul>
                             </li>
@@ -99,12 +115,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../updates/" class="nav-link">
+                                <a rel="prev" href="../setup/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../tips/" class="nav-link">
+                                <a rel="next" href="../tech_faq/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -126,26 +142,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#setup-guide" class="nav-link">Setup Guide</a>
+            <li class="nav-item" data-bs-level="1"><a href="#maintenance-tips" class="nav-link">Maintenance tips</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#docker" class="nav-link">Docker</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#docker-compose" class="nav-link">Docker Compose</a>
+            <li class="nav-item" data-bs-level="2"><a href="#replace-the-hdd" class="nav-link">Replace the HDD</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#astar-releases" class="nav-link">Astar Releases</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#additional-information" class="nav-link">Additional Information</a>
-              <ul class="nav flex-column">
               </ul>
             </li>
         </ul>
@@ -153,38 +155,160 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="setup-guide">Setup Guide</h1>
-<p>You can refer to the official documentation below for instructions on how to set up an <strong>Astar Archive Node</strong>.</p>
+<h1 id="maintenance-tips">Maintenance tips</h1>
+<h2 id="replace-the-hdd">Replace the HDD</h2>
+<p><strong>XFS Archive Node: Migrating Data from a 2TB HDD to a 5TB HDD (USB / Ubuntu 24.04 LTS)</strong></p>
+<h3 id="introduction">Introduction</h3>
+<p>This document describes the procedure used to migrate data from a 2TB HDD to a larger 5TB HDD on an archive node.<br />
+The migration was required due to increasing disk usage on the running node.</p>
+<p>The environment uses:</p>
 <ul>
-<li>🔗 <a href="https://docs.astar.network/docs/build/nodes/archive-node/">Archive Node</a></li>
+<li><strong>Ubuntu 24.04 LTS</strong></li>
+<li><strong>XFS filesystem</strong></li>
+<li><strong>USB‑connected portable HDDs (2TB and 5TB)</strong></li>
 </ul>
-<p>A node can be set up on a physical machine, virtual machine, container environment, or cloud instance. However, any setup other than a physical machine requires a significant amount of infrastructure-related technical knowledge.</p>
-<p>For those who are not technical specialists, we recommend starting by preparing a <strong>physical machine</strong>.</p>
-<p><img alt="Machines" src="../../assets/images/machines.png" /></p>
-<h2 id="docker">Docker</h2>
-<p>The configuration using Docker is documented in the official guide.  </p>
+<p>This guide is intended to help other operators performing similar maintenance.</p>
+<hr />
+<h3 id="system-overview">System Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Machine</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production archive node</td>
+<td>Machine A</td>
+<td>2TB HDD mounted at <code>/var/lib/astar</code></td>
+</tr>
+<tr>
+<td>Migration workstation</td>
+<td>Machine B</td>
+<td>Used to connect both 2TB and 5TB HDDs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="data-migration-procedure">Data Migration Procedure</h3>
+<p><strong>1. Work on Machine A (Detach the device)</strong></p>
+<p>Stop the running service</p>
+<pre><code class="language-bash"># sudo systemctl stop astar.service
+</code></pre>
+<p>Unmount the data directory</p>
+<pre><code class="language-bash"># sudo umount /var/lib/astar
+</code></pre>
+<hr />
+<p><strong>2. Work on Machine B (Migration)</strong></p>
+<p>2-1. Connect disks and verify devices</p>
+<p>Connect both the 2TB and 5TB HDDs (physical work)</p>
+<p>Check device information</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,TYPE,MODEL
+</code></pre>
+<p>Example:</p>
+<pre><code>sdc  1.8T disk ST2000LM007-1R8174
+└─sdc1 1.8T part
+sdd  4.5T disk WDC WD50NDZW-11BCSS0
+└─sdd1 4.5T part
+</code></pre>
 <ul>
-<li>🔗 <a href="https://docs.astar.network/docs/build/nodes/archive-node/docker">Dokcker</a></li>
+<li><strong>sdc → 2TB HDD</strong></li>
+<li><strong>sdd → 5TB HDD</strong></li>
 </ul>
-<h2 id="docker-compose">Docker Compose</h2>
-<p>For reference, here is an example procedure for setting up an archive node using Docker Compose. </p>
-<ul>
-<li>🔗 <a href="https://github.com/jttech-au/Astar-Archive-Node">How to create an Archive Node with Docker compose.yml</a> / Author: Dagga</li>
-</ul>
-<h1 id="astar-releases">Astar Releases</h1>
-<p>The release provides binaries for macOS x86_64, Ubuntu x86_64, and Linux ARM64 (aarch64).</p>
-<ul>
-<li>🔗 <a href="https://github.com/AstarNetwork/Astar/releases/latest">Latest Release</a></li>
-</ul>
-<h1 id="additional-information">Additional Information</h1>
-<p>Before setting up, I’ll provide some supplementary notes to the official documentation.</p>
-<h3 id="about-machine-specifications">About Machine Specifications</h3>
-<ul>
-<li><strong>As of December 2025</strong>, the HDD currently in use occupies <strong>1.73 TB</strong>.</li>
-<li>Since blockchain data storage functions as a type of database, performance is just as important as capacity, and for physical machines, power consumption becomes an additional critical factor.</li>
-<li>Although SSDs are recommended, HDDs can also be used. However, HDDs require careful attention to power supply, and USB bus‑powered connections are not recommended.</li>
-<li>It is safer to have at least <strong>8 GB of RAM</strong>. There are cases where Raspberry Pi 4/5 with 4 GB RAM have operated successfully, but machines with 8 GB or more tend to be more stable.</li>
-</ul></div>
+<hr />
+<p>2-2. Create a partition on the 5TB HDD</p>
+<p>Create a GPT label</p>
+<pre><code class="language-bash"># sudo parted /dev/sdd mklabel gpt
+</code></pre>
+<p>⚠ Note on alignment warnings
+Running:</p>
+<pre><code class="language-bash"># sudo parted -a optimal /dev/sdd mkpart primary xfs 0% 100%
+</code></pre>
+<p>may produce:</p>
+<pre><code>The closest location we can manage is 17.4kB to 1048kB (sectors 34..2047).
+</code></pre>
+<p>This indicates the partition does <strong>not</strong> start on a 2048‑sector (1MiB) boundary.<br />
+Proper alignment is important for performance and should not be ignored.</p>
+<p>✔ Correct partition creation (aligned at 1MiB)</p>
+<pre><code class="language-bash"># sudo parted -a optimal /dev/sdd mkpart primary xfs 1MiB 100%
+</code></pre>
+<hr />
+<p>2-3. Verify the partition</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT /dev/sdd
+</code></pre>
+<p>Example:</p>
+<pre><code>sdd     4.5T
+└─sdd1  4.5T ntfs
+</code></pre>
+<hr />
+<p>2-4. Create an XFS filesystem</p>
+<pre><code class="language-bash"># sudo mkfs.xfs -f /dev/sdd1
+</code></pre>
+<p>(Output omitted)</p>
+<hr />
+<p>2-5. Confirm XFS creation</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT /dev/sdd
+</code></pre>
+<pre><code>sdd     4.5T
+└─sdd1  4.5T xfs
+</code></pre>
+<hr />
+<p>2-6. Mount both disks</p>
+<pre><code class="language-bash"># sudo mkdir /a /b
+# sudo mount /dev/sdc1 /a
+# sudo mount /dev/sdd1 /b
+</code></pre>
+<p>Verify:</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT /dev/sdc /dev/sdd
+</code></pre>
+<hr />
+<p>2-7. Perform XFS dump &amp; restore (core migration step)</p>
+<p>Dump from 2TB → Restore to 5TB</p>
+<pre><code class="language-bash"># sudo xfsdump -J - /a | sudo xfsrestore -J - /b
+</code></pre>
+<p>This process took <strong>approximately 15 hours</strong> over USB 3.0.</p>
+<p>(Output omitted)</p>
+<hr />
+<p>2-8. Verify migrated data</p>
+<pre><code class="language-bash"># sudo ls -al /b
+</code></pre>
+<hr />
+<p>2-9. Optional: XFS integrity check</p>
+<p>Unmount the restored filesystem</p>
+<pre><code class="language-bash"># sudo umount /b
+</code></pre>
+<p>Run a read‑only check</p>
+<pre><code class="language-bash"># sudo xfs_repair -n /dev/sdd1
+</code></pre>
+<p>(Output omitted)</p>
+<hr />
+<p>2-10. Unmount and remove disks</p>
+<pre><code class="language-bash"># sudo sync
+# sudo umount /a
+# sudo umount /b
+</code></pre>
+<p>Then physically disconnect both HDDs.</p>
+<hr />
+<p><strong>3. Work on Machine A (Reconnect and resume service)</strong></p>
+<p>Connect the 5TB HDD (physical work)</p>
+<p>Verify the device</p>
+<pre><code class="language-bash"># lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT /dev/sdb
+</code></pre>
+<p>Example:</p>
+<pre><code>sdb     4.5T
+└─sdb1  4.5T xfs
+</code></pre>
+<p>Mount the new disk</p>
+<pre><code class="language-bash"># sudo mount /dev/sdb1 /var/lib/astar
+</code></pre>
+<p>Start the service</p>
+<pre><code class="language-bash"># sudo systemctl start astar.service
+</code></pre>
+<p>Monitor logs</p>
+<pre><code class="language-bash"># journalctl -f -u astar.service -n 100
+</code></pre></div>
             </div>
         </div>
 
