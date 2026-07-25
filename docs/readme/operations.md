@@ -65,10 +65,14 @@ Nodes may also become ineligible for rewards if they:
 
 ## 7. Register an On-Chain Identity
 
-Participants should register the required on-chain identity for the account used in the program.
+Participants must register the required on-chain identity for the Astar account used in the program.
+
+Follow the [official Astar documentation](https://docs.astar.network/docs/build/nodes/collator/spinup_collator/#identity) to register your on-chain identity.
 
 If the required on-chain identity is not registered, no reward will be provided, even if the node meets the uptime requirements.
-The program administrator should provide the identity format and verification procedure used for each season.
+
+> If multiple reward conditions apply, the priority rules defined in the [Rewards and Payments](./rewards.md) page will be used.
+
 
 ## 8. Participate in Program Reviews
 

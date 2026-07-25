@@ -1,6 +1,6 @@
-## Jan 2026 -
+## July 2026 -
 
-Future updates...
+Information regarding the start of recruitment for Season 3.1
 
 View peers map on Astar [Telemetry](https://telemetry.polkadot.io/#map/0x9eb76c5184c4ab8679d2d5d819fdf90b9c001403e9e17da2e14b6d8aec4029c6)
 

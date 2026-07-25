@@ -14,15 +14,18 @@ The actual number of ASTR tokens is adjusted using the relevant ASTR price and t
 
 [View the ASTR price reference chart](https://astar.subscan.io/tools/charts?type=price)
 
+
 ## Reward Categories
 
-| Node or participant status | Reward rate |
-|---|---:|
-| Uptime 80% or more | 100% |
-| Uptime below 80% | 50% |
-| Node is being restored or resynchronized | 30% |
-| Node is not operating or is inactive | 0% |
-| Required on-chain identity is not registered | No reward (0%) |
+If multiple conditions apply in the same month, the first applicable condition in the following table takes precedence.
+
+| Priority | Condition | Reward Rate |
+|---:|---|---:|
+| 1 | Required on-chain identity is not registered | No reward (0%) |
+| 2 | Restoration or resynchronization has been reported and confirmed as in progress | 30% |
+| 3 | Node is inactive or not operating outside a confirmed restoration or resynchronization period | No reward (0%) |
+| 4 | Monthly uptime is 80% or more | 100% |
+| 5 | Monthly uptime is below 80% | 50% |
 
 Nodes that remain inactive for a long period, go offline frequently, or fail to stay synchronized are not eligible for rewards.
 
