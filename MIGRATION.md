@@ -1,55 +1,51 @@
-# Sites migration — design review stage
+# Sites migration and publishing
 
-The original MkDocs sources and generated `site/` remain intact until the user selects a design and the complete replacement is verified. The work is on `sites/design-preview`; do not merge or delete the old site as part of the design review.
+## Selected experience
 
-## Current preview
+Design 01 (Astar Portal), with light and dark palettes. The initial palette follows the device preference; a manual choice persists in browser storage and across article/language changes. Regular body text is 20 px on desktop and 18 px on mobile, with larger navigation, tables, buttons and captions. Reduced-motion preferences are respected.
 
-- Private owner-only Sites project, configured in `.openai/hosting.json`.
-- Five different home-page compositions, with English and Japanese home, reward, and setup pages (30 pages).
-- Root review gallery switches design, language, page, and a 390 px mobile frame. It does not record a final selection.
-- Search covers the three preview pages. Operating rules and maintenance links explicitly open the original documentation. Discord, Dashboard, and Telemetry remain external services.
-- Season 3.1 is closed (August 31, 2026, 23:59 UTC). Do not restore the application button without an explicit recruitment update.
-- No applicant CSV, application records, analytics, live node metrics, or private files are included.
+The production portal is public at https://astar-peers-program.cctksarah.chatgpt.site/ . Root opens English; `/ja/` is Japanese. The existing `peers.sun-t-sarah.work` domain is not reconfigured. No old-host content links are needed by the new site. Dashboard, Telemetry, Discord, official documentation and community articles remain external services.
 
-## Source and asset migration map
+## Content migration map
 
-| Source | Final destination / treatment | Preview status |
-| --- | --- | --- |
-| `docs/index.md` | New portal home; replace repetitive index lists with task-based entrances | Five bilingual variants |
-| `docs/readme/program.md` | Program overview, objectives, priority regions, season milestones | Condensed home sections; full text pending design selection |
-| `docs/readme/join.md` | Participation page combined with application information | Closed status on home; full text pending |
-| `docs/readme/requirements.md` | Dedicated hardware/skills reference, linked from participation | Hardware highlights and setup page; full reference pending |
-| `docs/readme/operations.md` | Operator rules, Identity registration, recovery and monthly checklist | Personal checklist and link to original; full text pending |
-| `docs/readme/rewards.md` | Rewards page; preserve condition order, amounts, EMA30, timing and funding links | Full bilingual article, all five designs |
-| `docs/readme/updates.md` | Updates and dated season archive | Latest season note; historical image pending |
-| `docs/build/setup.md` | Setup guide; retain official, Docker and Compose links, Dagga credit | Full bilingual article, all five designs; added read-only `df -h` example |
-| `docs/build/tips.md` | Maintenance article; preserve disk migration sequence, commands, examples and cautions | Link to original; full article pending |
-| `docs/build/tech_faq.md` | FAQ resource entry linking to original article, author Sequaja | Pending |
-| `docs/community/application.md` | Merge into participation; keep deadline history, remove active application CTA | Closed status; no form link in preview |
-| `docs/community/discord.md` | Community section with Builder Role instructions, Discord link and screenshots | Text and link included; screenshots pending |
-| `docs/community/peers.md` | Peers listing, dates, regions, node and identity fields; external Dashboard | Six source node entries, names/regions/Identity included; join dates pending |
-| `docs/resources/links.md` | Resources grouped into technical articles and previous proposals | Full links and author credits pending |
+All article bodies now live in `portal/content/en/` and `portal/content/ja/`. The selected home page uses shared text from `portal/content.mjs`. The original 14 pages have been consolidated into home plus 11 articles per language.
 
-| Existing image | Treatment |
+| Original MkDocs source | New route (prefix `/en/` or `/ja/`) |
 | --- | --- |
-| `docs/assets/images/top.jpg` | Decorative existing network illustration in Global Network and Community Journal; not live telemetry |
-| `docs/assets/images/machines.png` | Setup article with bilingual alt text |
-| `docs/assets/images/2023-2025.png` | Preserve in final historical updates; pending |
-| `docs/assets/images/role.png`, `channel.png` | Preserve in final Discord guidance; pending |
-| `docs/assets/images/map_202601.png` | Keep source during review; dated recruitment-region illustration, not a live participation map |
-| `docs/assets/images/topimage.png`, README attachment | Retain source during review; overlapping hero assets need no second publication |
+| `docs/index.md` | Home |
+| `docs/readme/program.md` | `program/` |
+| `docs/readme/join.md`, `docs/community/application.md` | `join/`; Season 3.1 is closed, dated deadline retained, no active application link |
+| `docs/readme/requirements.md` | `requirements/` |
+| `docs/readme/operations.md` | `operations/` |
+| `docs/readme/rewards.md` | `rewards/`; preserve 0%, 30%, 0%, 100%, 50% condition priority, EMA30, funding and timing |
+| `docs/readme/updates.md` | `updates/`; recruitment closure and original historical image |
+| `docs/build/setup.md` | `setup/`; official, Docker and Compose links, Dagga credit and dated storage note |
+| `docs/build/tips.md` | `maintenance/`; original commands and example outputs in both languages, in order |
+| `docs/build/tech_faq.md` | `guides/`; original FAQ link and Sequaja credit |
+| `docs/community/peers.md`, `docs/community/discord.md` | `community/`; all six node entries with join dates and Identity, Dashboard credit, Builder Role and Discord screenshots |
+| `docs/resources/links.md` | `resources/`; technical articles, authors and previous funding proposals |
 
-## Build and local review
+`portal/migration-links.json` records the 21 original external references (excluding the closed application form) for automated coverage checks. Shared old path names and the previously shared design-review routes redirect to the chosen portal. Preview-only frames and design controls are removed.
 
-Requires Node.js; no dependency installation. Run `npm run build`, `npm run check`, then `npm run preview`. Local URL is `http://127.0.0.1:4173`.
+The machines illustration, 2023–2025 historical record, Builder Role screenshot and channel screenshot are retained in `portal/assets/images/`. Overlapping decorative map/hero assets are recoverable from Git history. Applicant CSVs and local applicant pages were never imported.
 
-Source content lives in `portal/content.mjs`, common templates in `scripts/build-preview.mjs`, presentation in `portal/site.css`, gallery in `portal/review.*`. Generated `dist/` is ignored and rebuilt before publishing.
+## Validation
 
-## Chat-based maintenance and publishing
+`npm run check` validates internal links/anchors, language counterpart routes, all 12 search entries per language, closed recruitment, reward priorities, byte-equivalent maintenance code/output blocks, preserved external references, theme controls, base font sizes, and AA contrast for key text/surface pairs. Use browser QA for palette switching/persistence, menus, search, tables, copy buttons, keyboard access and narrow layouts.
 
-1. Receive the requested content change in chat and check the latest GitHub branch.
-2. Update English and Japanese together; do not alter policy, dates, author credits or commands without source evidence or the user's instruction.
-3. Build, validate relevant behavior, and commit. GitHub `origin` remains `tksarah/PeersProgram`; Sites has its separate publishing source endpoint.
-4. Use the installed Sites source workflow with a short-lived credential via hidden stdin only. The workflow commits, synchronizes source, and packages the verified static output. Never save credentials to files or Git.
-5. Push the identical commit to the GitHub branch, and deploy the packaged Sites version. Preserve owner-only access throughout design review.
-6. After the design is chosen, complete all mapped pages, remove review-only controls/routes, and publish publicly at the Sites URL. Only after successful migration, retain a Git tag for the old version and remove MkDocs files and old generated output in a dedicated commit. The existing domain is not changed.
+Shell code is displayed as in the original document. Copy buttons omit the original leading `# ` prompt marker so the copied command is usable; no command is executed by the site.
+
+## Chat-based updates and publication
+
+1. Receive the requested change in chat and inspect the latest GitHub state.
+2. Edit English and Japanese together, preserving policy and source credits unless an explicit update is requested.
+3. Build with `npm run build`, validate with `npm run check`, and check the affected browser behavior.
+4. Obtain a short-lived credential for the existing Site ID in `.openai/hosting.json`; pass it only through hidden stdin to the installed Sites source workflow. Use its verified source commit and packaged archive. Do not write credentials to disk, source, logs or browser code.
+5. Push that same commit to GitHub, save the Sites version with the archive, and deploy it. Preserve the public audience on updates.
+6. Report the verified deployment URL. Keep the last successful version available if validation/publication fails.
+
+GitHub `origin` remains `tksarah/PeersProgram`. Sites has a separate source synchronization endpoint; it is not a replacement for the GitHub repository. The built archive contains the configured `dist/` assets, not local private files.
+
+## Legacy recovery
+
+Tag `mkdocs-before-sites-migration-2026-10-20` points to the original MkDocs commit `44794cfb214001780c6263bc2fa95e3039b2b2d6`. Retire the old `docs/`, generated `site/`, `mkdocs.yml`, design-comparison code, and one-time importer only after the complete migrated publication succeeds. Preserve the tag; never purge the Git history to clean up the old format.
