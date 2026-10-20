@@ -9,6 +9,7 @@ const allHtml=html.map(f=>readFileSync(f,'utf8')).join('\n').replaceAll('&amp;',
 for(const link of JSON.parse(readFileSync('portal/migration-links.json','utf8')))assert.ok(allHtml.includes(link),`Missing original external reference: ${link}`);
 for(const file of html){
  const text=readFileSync(file,'utf8'),ids=[...text.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ assert.ok(!text.includes('undefined'),`Missing generated content: ${file}`);
  assert.equal(new Set(ids).size,ids.length,`Duplicate ids: ${file}`);
  for(const m of text.matchAll(/\b(?:href|src)="([^"]+)"/g)){
   const link=m[1].replaceAll('&amp;','&');if(/^https?:/.test(link))continue;

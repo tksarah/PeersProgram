@@ -48,4 +48,4 @@ GitHub `origin` remains `tksarah/PeersProgram`. Sites has a separate source sync
 
 ## Legacy recovery
 
-Tag `mkdocs-before-sites-migration-2026-10-20` points to the original MkDocs commit `44794cfb214001780c6263bc2fa95e3039b2b2d6`. Retire the old `docs/`, generated `site/`, `mkdocs.yml`, design-comparison code, and one-time importer only after the complete migrated publication succeeds. Preserve the tag; never purge the Git history to clean up the old format.
+Tag `mkdocs-before-sites-migration-2026-10-20` points to the original MkDocs commit `44794cfb214001780c6263bc2fa95e3039b2b2d6`. Following successful publication and anonymous access verification, the old `docs/`, generated `site/`, `mkdocs.yml`, design-comparison code, and one-time importer were removed. The tag and complete Git history remain available for recovery.
