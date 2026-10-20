@@ -1,0 +1,10 @@
+{
+  "name": "astar-peers-portal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-preview.mjs",
+    "check": "node scripts/check-preview.mjs",
+    "preview": "node scripts/preview.mjs"
+  }
+}
