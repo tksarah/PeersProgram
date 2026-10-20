@@ -20,7 +20,7 @@ const ext=(href,label,cls='text-link')=>`<a class="${cls}" href="${esc(href)}" t
 const button=(href,label,secondary=false)=>`<a class="button ${secondary?'secondary':''}" href="${esc(href)}">${esc(label)} ${icon()}</a>`;
 const write=(path,text)=>{const file=resolve(root,path);mkdirSync(resolve(file,'..'),{recursive:true});writeFileSync(file,text);};
 const nav=(lang,active='')=>[['program',copy[lang].program],['guides',copy[lang].guides],['community',copy[lang].community],['resources',labels[lang].resources]].map(([page,title])=>`<a href="${url(lang,page)}" ${active===page?'aria-current="page"':''}>${title}</a>`).join('');
-const brand=lang=>`<a class="brand" href="${url(lang)}" aria-label="Astar Peers Program — ${copy[lang].home}"><span class="brand-mark" aria-hidden="true">✳</span><span>astar<span class="brand-sub">PEERS PROGRAM</span></span></a>`;
+const brand=lang=>`<a class="brand" href="${url(lang)}" aria-label="Astar Peers Program — ${copy[lang].home}"><span class="brand-mark" aria-hidden="true">✳</span><span>Astar<span class="brand-sub">PEERS PROGRAM</span></span></a>`;
 const themeInit=`(()=>{let t;try{t=localStorage.getItem('peers-color-theme')}catch{}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t})()`;
 
 function shell(lang,page,title,description,main){
