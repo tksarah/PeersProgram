@@ -7,7 +7,7 @@
 | Dagga | Dagga-BL | 2023-12-05 | Australia | Dagga | 
 | Dagga | Dagga-VM | 2023-12-05 | Australia | Dagga | 
 | Guitarman7202 | guitarman_SGP | 2023-12-05 | Singapore | Guitarman | 
-| Burak | Astar-Ankara-merry | 2026-10-01 | Istanbul | *** | 
+| Burak | Astar-Ankara-merry | 2026-10-01 | Istanbul | Bna Astar | 
 
 # Peers Dashboard
 
